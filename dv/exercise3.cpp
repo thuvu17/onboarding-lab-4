@@ -49,7 +49,6 @@ uint16_t mystery_2(uint8_t a, uint8_t b, bool reset) {
     }
   }
 }
-        
 
 
 TEST_CASE("Exercise 3") {
