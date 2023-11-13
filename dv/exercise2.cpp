@@ -31,22 +31,11 @@ bool test(VExercise2& model, uint16_t test_input) {
   return model.out != LFSR(curr_state);
 }
 
-int main() {
-  VExercise2 model;
-  init_model(model);
-  for(int i = 0; i < 10000; i++) {
-    uint16_t test_val = rand() % RAND_MAX;
-    if (!test(model, test_val)) {
-      return 1;
-    } 
-  }
-}
-
 TEST_CASE("Exercise 2") {
   VExercise2 model;
   init_model(model);
   for(int i = 0; i < 10000; i++) {
     uint16_t test_val = rand() % RAND_MAX;
-    REQUIRE(test(model, test_val) == 0)
+    REQUIRE(test(model, test_val) == 0);
   }
 }
